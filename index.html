@@ -2,49 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JARVIS - Professional AI</title>
+  <title>Jarvis AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body{margin:0;background:#0b0f17;color:#e8eefc;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}
-    .wrap{max-width:920px;margin:0 auto;padding:24px}
-    h1{margin:0;letter-spacing:.25em}
-    .sub{opacity:.75;margin-top:8px}
-    .card{margin-top:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;overflow:hidden}
-    .chat{height:68vh;overflow:auto;padding:16px}
-    .msg{margin:12px 0;display:grid;gap:6px}
-    .tag{font-size:12px;opacity:.7}
-    .bubble{display:inline-block;max-width:85%;padding:12px 14px;border-radius:14px;line-height:1.4;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);white-space:pre-wrap}
-    .user{justify-items:end}
-    .user .bubble{background:rgba(66,133,244,.25);border-color:rgba(66,133,244,.3)}
-    .composer{display:grid;grid-template-columns:1fr auto;gap:10px;padding:14px;border-top:1px solid rgba(255,255,255,.1)}
-    input{padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(0,0,0,.25);color:#fff;outline:none}
-    button{padding:12px 16px;border-radius:12px;border:0;background:#2d6cdf;color:#fff;font-weight:600;cursor:pointer}
-    .bar{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;opacity:.85}
-    .pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:8px 12px;font-size:13px}
+    body {
+      background: #0b0f14;
+      color: #e6e6e6;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+    }
+    #chat {
+      height: 65vh;
+      overflow-y: auto;
+      border: 1px solid #222;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+    input {
+      width: 70%;
+    }
+    button {
+      width: 25%;
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>JARVIS</h1>
-    <div class="sub">Professional AI Assistant</div>
 
-    <div class="bar">
-      <div class="pill">Status: <span id="status">Idle</span></div>
-      <div class="pill">API: <span>/api/chat</span></div>
-    </div>
+  <h2>JARVIS – AI Assistant</h2>
 
-    <div class="card">
-      <div id="chat" class="chat"></div>
-      <form id="form" class="composer">
-        <input id="input" placeholder="Ask Jarvis…" autocomplete="off"/>
-        <button id="sendBtn" type="submit">Send</button>
-      </form>
-    </div>
+  <div id="chat"></div>
 
-    <p class="sub">
-      ⚠️ API key is NOT in this file. It stays in Vercel Environment Variables (secure).
-    </p>
-  </div>
+  <input id="userInput" placeholder="Ask Jarvis..." />
+  <button id="sendBtn">Send</button>
 
   <script src="./app.js"></script>
 </body>
