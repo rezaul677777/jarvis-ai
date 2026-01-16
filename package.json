@@ -1,0 +1,9 @@
+{
+  "name": "jarvis-ai",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "openai": "^4.0.0"
+  }
+}
